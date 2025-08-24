@@ -1,0 +1,10 @@
+.login-div {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+@media (min-width: 556px) {
+  .login-div {
+    width: 500px;
+  }
+}

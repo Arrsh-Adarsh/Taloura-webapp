@@ -1,0 +1,42 @@
+mat-card {
+  padding: 8px;
+  background-color: #eac100;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    background-color: rgba(234, 193, 0, 0.25);
+    backdrop-filter: blur(8px);
+    a {
+      color: #dee1ec;
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.login {
+  background-color: #10316b;
+}
+
+
+.dropdown {
+  .profile-avatar-sm {
+    height: 3em;
+    width: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  .profile-avatar-sm-img {
+    height: 3em;
+    width: 3em;
+    border: 0.1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+}
+

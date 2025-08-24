@@ -1,0 +1,26 @@
+<mat-card class="login-div mx-auto">
+  <mat-tab-group dynamicHeight [color]="'accent'">
+    <mat-tab [label]="tabName">
+      <div class="example-small-box mat-elevation-z4">        
+        <router-outlet class="login-form-div"></router-outlet>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
+
+<!-- <mat-card class="login-div mx-auto">
+  <mat-tab-group *ngIf="isLoginTab" dynamicHeight [color]="'accent'">
+    <mat-tab label="Login">
+      <div class="example-small-box mat-elevation-z4">
+        <app-login-form class="login-form-div"></app-login-form>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  <mat-tab-group *ngIf="!isLoginTab" dynamicHeight [color]="'accent'">
+    <mat-tab label="Sign Up">
+      <div class="example-small-box mat-elevation-z4">
+        <app-signup-form class="login-form-div"></app-signup-form>
+      </div>
+    </mat-tab>
+  </mat-tab-group> 
+</mat-card>-->
