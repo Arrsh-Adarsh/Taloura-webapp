@@ -20,6 +20,6 @@ import { LoginRoutingModule } from './login-routing.module';
     ReactiveFormsModule,
     MaterialModule
   ],
-  bootstrap: [LoginComponent],
+  bootstrap: [],
 })
 export class LoginModule { }

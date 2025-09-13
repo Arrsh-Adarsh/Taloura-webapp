@@ -1,0 +1,32 @@
+<div class="story-form-div">
+    <div class="form-header-div margin-auto text-center align-center mt-5">
+        <h2>{{ formTitle }}</h2>
+    </div>
+    <form [formGroup]="storyForm" class="p-2 mt-3">
+        <mat-form-field appearance="outline" class="col-md-12">
+            <mat-label>Title</mat-label>
+            <input 
+                matInput
+                placeholder="Enter Story Title"
+                type="text"
+                formControlName="title"
+            />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="col-md-12">
+            <mat-label>Story</mat-label>
+            <textarea 
+                matInput
+                placeholder="Enter your story here"
+                type="text"
+                formControlName="story"
+                autoResize
+            ></textarea>
+        </mat-form-field>
+        <div class="submit-button-div text-center mt-4">
+            <button mat-raised-button color="primary" (click)="onFormSubmit()" [disabled]="storyForm.invalid">
+                {{ submitButtonLabel}}
+            </button>
+        </div>
+    </form>
+</div>

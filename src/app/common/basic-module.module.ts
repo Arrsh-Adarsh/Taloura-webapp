@@ -17,7 +17,7 @@ import { BodyRoutingModule } from '../components/body-routing.module';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ]
 })
 export class BasicModuleModule { }

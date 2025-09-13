@@ -1,9 +1,10 @@
 export interface Story {
-    id: number,
-    title: string,
-    date: Date,
-    content: string,
-    author: string,
+    storyId?: number,
+    storyTitle: string,
+    story: string,
+    authorId: number,
+    createTimestamp: Date,
+    updateTimestamp: Date
     // genere: string[]
     // summary?: string,
     // tags?: string[],

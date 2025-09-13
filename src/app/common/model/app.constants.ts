@@ -1,8 +1,11 @@
 export class AppConstants {
   static readonly APP_NAME = 'Taloura';
   static readonly VERSION = '1.0.0';
-  static readonly API_BASE_URL = 'https://api.taloura.com';
+  static readonly API_BASE_URL = 'http://localhost:8080/api';
   static readonly DEFAULT_LANGUAGE = 'en';
+
+  static readonly SUCCESS_STATUS = 'sucess';
+  static readonly FAIL_STATUS = 'fail';
 
   public static USER_ROLES = {
     ADMIN: 'admin',

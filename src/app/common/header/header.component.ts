@@ -11,15 +11,15 @@ export class HeaderComponent {
 
   routerToolbar = [
     { path: 'home', label: 'Explore' },
-    { path: 'home', label: 'WriteUp' },
-    { path: 'home', label: 'Library' },
+    { path: 'writeUp', label: 'WriteUp' },
+    { path: 'library', label: 'Library' },
     { path: 'profile', label: 'Profile' },
   ];
 
   routerProfile = [
     { path: 'home', label: 'Explore' },
-    { path: 'home', label: 'WriteUp' },
-    { path: 'home', label: 'Library' },
+    { path: 'writeUp', label: 'WriteUp' },
+    { path: 'library', label: 'Library' },
     { path: 'profile', label: 'Profile' },
   ];
 
