@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { select, Store } from '@ngrx/store';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { addStory } from 'src/app/common/model/story/store/story.actions';
-import { selectLoading, selectStatusMessage } from 'src/app/common/model/story/store/story.selector';
 import { StoryState } from 'src/app/common/model/story/store/story.state';
 import { Story } from  'src/app/common/model/story/story';
 
@@ -22,12 +21,13 @@ export class StoryFormComponent implements OnInit {
 
   loading$: Observable<boolean>;
   statusMessage$: Observable<any>;
+  status$: Observable<any>;
 
   constructor(private builder: FormBuilder, 
-              private store: Store<{stories: {stories: StoryState}}>) {
-
-                this.loading$ = this.store.pipe(select(selectLoading));
-                this.statusMessage$ = this.store.pipe(select(selectStatusMessage));
+              private store: Store<{stories: StoryState}>) {
+                this.loading$ = this.store.select((state) => state.stories.loading)
+                this.statusMessage$ = this.store.select((state) => state.stories.statusMessage)
+                this.status$ = this.store.select((state) => state.stories.status)
               }
 
   ngOnInit(): void {

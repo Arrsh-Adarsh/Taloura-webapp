@@ -27,4 +27,5 @@ export class HeaderComponent {
     { path: 'user/login', label: 'Login' },
     { path: 'user/signup', label: 'SignUp' },
   ];
+
 }

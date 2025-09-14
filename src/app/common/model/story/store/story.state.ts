@@ -3,7 +3,7 @@ import { Story } from '../story';
 export interface StoryState {
     stories: Story[];
     loading: boolean;
-    status: any;
+    status: number| null;
     statusMessage: any;
 }
 

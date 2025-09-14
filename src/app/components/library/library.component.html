@@ -1,0 +1,34 @@
+<div class="library-div row">
+
+    <div *ngIf="loading$ | async"></div>
+
+    <div *ngIf="(status$  | async) as status">
+        <div *ngIf="!isSuccessStatus(status) ">
+            {{status}}
+        </div>
+    </div>
+
+    <div *ngFor="let story of stories$ | async" class="col-md-4">
+        <mat-card class="library-card-div">
+            <mat-card-header>
+                <div mat-card-avatar class="card-header-image"></div>
+                <mat-card-title>{{ story.storyTitle }}</mat-card-title>
+                <mat-card-subtitle>{{ story.authorId }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="../../../assets/images/profile-avatar.png" alt="Cover image">
+            <mat-card-content>
+                <p>
+                    {{story.story}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions class="d-flex justify-content-around">
+                <button mat-raised-button color="accent">LIKE</button>
+                <button mat-raised-button color="accent">SHARE</button>
+            </mat-card-actions>
+            <mat-card-footer class="d-flex justify-content-md-end">
+                <p>Post date: {{ story.createTimestamp | date: 'yyyy-MM-dd'}}</p>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+
+</div>

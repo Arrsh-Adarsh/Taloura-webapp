@@ -1,0 +1,13 @@
+.library-div {
+    padding: 2em;
+    max-width: 80%;
+    margin: auto;
+    .library-card-div {
+        max-width: 350px;
+        margin: 3em auto 0 2em;
+        .card-header-image {
+            background-image: url('../../../assets/images/profile-avatar.png');
+            background-size: cover;
+        }
+    }
+}

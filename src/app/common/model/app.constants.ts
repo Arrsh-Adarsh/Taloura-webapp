@@ -1,7 +1,7 @@
 export class AppConstants {
   static readonly APP_NAME = 'Taloura';
   static readonly VERSION = '1.0.0';
-  static readonly API_BASE_URL = 'http://localhost:8080/api';
+  static readonly API_BASE_URL = 'http://192.168.1.7:8080/api/v1';
   static readonly DEFAULT_LANGUAGE = 'en';
 
   static readonly SUCCESS_STATUS = 'sucess';

@@ -12,9 +12,12 @@ export class StoryService {
 
   constructor(private http: HttpClient) { }
 
-
   saveStory(story: Story) : Observable<ResponseEntity<Story>> {
-    return this.http.post<ResponseEntity<Story>>(`${AppConstants.API_BASE_URL}/story/v1/saveStory`, story);
+    return this.http.post<ResponseEntity<Story>>(`${AppConstants.API_BASE_URL}/story`, story);
+  }
+
+  fetchAllStory() : Observable<ResponseEntity<Story[]>> {
+    return this.http.get<ResponseEntity<Story[]>>(`${AppConstants.API_BASE_URL}/story`);
   }
 
 }
